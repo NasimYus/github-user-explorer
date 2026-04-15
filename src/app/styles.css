@@ -1,0 +1,239 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1f2937;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.page-header p {
+  margin: 8px 0 0;
+  color: #4b5563;
+}
+
+.search-input-wrap {
+  margin-top: 20px;
+  display: block;
+}
+
+.search-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.search-input {
+  width: 100%;
+  border: 1px solid #d0d7e2;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.user-list,
+.repo-list {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.user-card,
+.repo-card,
+.profile-header,
+.empty-state,
+.inline-error {
+  background: #ffffff;
+  border: 1px solid #dce3ef;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.user-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.user-card img {
+  border-radius: 999px;
+}
+
+.user-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.user-card a {
+  color: #2563eb;
+}
+
+.button {
+  border: 1px solid #1d4ed8;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  padding: 9px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button.secondary {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.back-button {
+  margin-bottom: 16px;
+}
+
+.profile-page {
+  display: grid;
+  gap: 14px;
+}
+
+.profile-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.profile-header img {
+  border-radius: 999px;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 1.55rem;
+}
+
+.profile-login {
+  margin: 4px 0 10px;
+  color: #6b7280;
+}
+
+.profile-followers {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.repo-card a {
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.repo-card p {
+  margin: 8px 0;
+  color: #4b5563;
+}
+
+.repo-meta {
+  display: flex;
+  gap: 16px;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.empty-state,
+.inline-error {
+  margin-top: 24px;
+}
+
+.empty-state h2,
+.inline-error h2,
+.inline-error h1 {
+  margin: 0;
+}
+
+.empty-state p,
+.inline-error p {
+  margin: 8px 0 0;
+  color: #4b5563;
+}
+
+.sentinel,
+.list-end {
+  margin: 16px 0;
+  text-align: center;
+  color: #6b7280;
+}
+
+.skeleton {
+  border-radius: 8px;
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.skeleton-column {
+  display: grid;
+  gap: 10px;
+}
+
+.user-card-skeleton {
+  grid-template-columns: auto 1fr auto;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .user-card {
+    grid-template-columns: auto 1fr;
+  }
+
+  .button.secondary {
+    grid-column: 1 / -1;
+  }
+
+  .profile-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
