@@ -88,3 +88,18 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+## Deploy to GitHub Pages
+
+This repository is configured for automatic deployment via GitHub Actions.
+
+- Workflow: `.github/workflows/deploy-pages.yml`
+- Trigger: push to `main`
+- Production URL: `https://nasimyus.github.io/github-user-explorer/`
+
+Enable it once in GitHub:
+
+1. Open repository **Settings** -> **Pages**.
+2. In **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Push to `main` (or run the workflow manually from **Actions**).
+
